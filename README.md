@@ -32,7 +32,11 @@
 ![Strategy Generator 2](/Strategy_Generator_1.png)
 ![Strategy Generator 1](/Strategy_Generator_2.png)
 
-
+## Strategy Generator Video
+<video width="640" controls>
+  <source src="" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 
 
