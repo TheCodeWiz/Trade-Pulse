@@ -42,7 +42,7 @@
 
 1. **Clone the repo:**
     ```sh
-    git clone https://github.com/yourusername/stock_market_app.git
+    git clone https://github.com/TheCodeWiz/Trade-Pulse.git
     cd stock_market_app
     ```
 <!-- 
@@ -95,6 +95,6 @@
 ## 💡 Author
 
 **Manav Bhatt**  
-[GitHub](https://github.com/yourusername) • [LinkedIn](https://linkedin.com/in/yourprofile)
+[GitHub](https://github.com/TheCodeWiz) • [LinkedIn](https://www.linkedin.com/in/manav-bhatt1409/)
 
 ---
