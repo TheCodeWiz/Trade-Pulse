@@ -33,11 +33,7 @@
 ![Strategy Generator 1](/Strategy_Generator_2.png)
 
 ## Strategy Generator Video
-<video width="640" controls>
-  <source src="" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-
+[▶️ Watch Strategy Generator Video](https://github.com/TheCodeWiz/Trade-Pulse/blob/main/Strategy_Generator.mp4)
 
 
 ---
