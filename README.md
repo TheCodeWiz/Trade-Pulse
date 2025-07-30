@@ -22,11 +22,19 @@
 
 ---
 
-## 🖥️ Screenshots
+## 🖥️ Screenshots and Videos
 
-| PCR Analysis | Gainers & Losers | Global Indices |
+| PCR Analysis | Gainers & Losers | Global Indices 
 |:---:|:---:|:---:|
 | ![PCR](/PCR_Analysis.png) | ![Gainers](/gainers_&_losers.png) | ![Indices](/Global_Indices.png) |
+
+## Strategy Generator Images 
+![Strategy Generator 2](/Strategy_Generator_1.png)
+![Strategy Generator 1](/Strategy_Generator_2.png)
+
+
+
+
 
 ---
 
