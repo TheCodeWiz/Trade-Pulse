@@ -1,0 +1,8 @@
+streamlit
+pandas
+requests
+urllib3
+pytz
+streamlit-autorefresh
+matplotlib
+numpy
