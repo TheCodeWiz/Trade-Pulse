@@ -22,19 +22,11 @@
 
 ---
 
-## 🖥️ Screenshots and Videos
+## 🖥️ Screenshots
 
-| PCR Analysis | Gainers & Losers | Global Indices 
+| PCR Analysis | Gainers & Losers | Global Indices |
 |:---:|:---:|:---:|
 | ![PCR](/PCR_Analysis.png) | ![Gainers](/gainers_&_losers.png) | ![Indices](/Global_Indices.png) |
-
-## Strategy Generator Images 
-![Strategy Generator 2](/Strategy_Generator_1.png)
-![Strategy Generator 1](/Strategy_Generator_2.png)
-
-## Strategy Generator Video
-[▶️ Watch Strategy Generator Video](https://github.com/TheCodeWiz/Trade-Pulse/blob/main/Strategy_Generator.mp4)
-
 
 ---
 
@@ -42,7 +34,7 @@
 
 1. **Clone the repo:**
     ```sh
-    git clone https://github.com/TheCodeWiz/Trade-Pulse.git
+    git clone https://github.com/yourusername/stock_market_app.git
     cd stock_market_app
     ```
 <!-- 
@@ -95,6 +87,6 @@
 ## 💡 Author
 
 **Manav Bhatt**  
-[GitHub](https://github.com/TheCodeWiz) • [LinkedIn](https://www.linkedin.com/in/manav-bhatt1409/)
+[GitHub](https://github.com/yourusername) • [LinkedIn](https://linkedin.com/in/yourprofile)
 
 ---
