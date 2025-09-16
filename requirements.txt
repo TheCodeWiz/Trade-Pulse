@@ -5,4 +5,5 @@ urllib3
 pytz
 streamlit-autorefresh
 matplotlib
+google-generativeai
 numpy
