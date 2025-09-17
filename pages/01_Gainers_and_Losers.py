@@ -3,6 +3,7 @@ import pandas as pd
 import requests
 import re
 from datetime import datetime
+from io import StringIO
 
 st.markdown("""
     <style>
@@ -53,7 +54,7 @@ def fetch_table(url, gainers=True):
         resp = requests.get(url, headers=headers, timeout=10)
         if resp.status_code != 200:
             return pd.DataFrame()
-        tables = pd.read_html(resp.text)
+        tables = pd.read_html(StringIO(resp.text))
         for df in tables:
             if "Company Name" in df.columns:
                 if "% Chg" in df.columns:
@@ -150,3 +151,4 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+
