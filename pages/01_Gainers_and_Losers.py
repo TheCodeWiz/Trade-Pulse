@@ -151,7 +151,6 @@
 #     """,
 #     unsafe_allow_html=True
 # )
-
 import streamlit as st
 import pandas as pd
 import requests
@@ -236,10 +235,32 @@ def fetch_table(url, gainers=True):
     except Exception:
         return pd.DataFrame()
 
+# def style_gainers(df):
+#     styled = df.style \
+#         .format({'% Change': '{:+.2f}%'}) \
+#         .applymap(lambda x: 'color: #2ecc71' if isinstance(x, float) and x > 0 else 'color: #e74c3c', subset=['% Change']) \
+#         .set_properties(**{'background-color': '#1E1E1E', 'color': 'white'}) \
+#         .set_table_styles([{
+#             'selector': 'th',
+#             'props': [('background', '#2E2E2E'), ('color', 'white')]
+#         }])
+#     return styled
+
+# def style_losers(df):
+#     styled = df.style \
+#         .format({'% Change': '{:+.2f}%'}) \
+#         .applymap(lambda x: 'color: #e74c3c' if isinstance(x, float) and x < 0 else 'color: #2ecc71', subset=['% Change']) \
+#         .set_properties(**{'background-color': '#1E1E1E', 'color': 'white'}) \
+#         .set_table_styles([{
+#             'selector': 'th',
+#             'props': [('background', '#2E2E2E'), ('color', 'white')]
+#         }])
+#     return styled
+
 def style_gainers(df):
     styled = df.style \
         .format({'% Change': '{:+.2f}%'}) \
-        .applymap(lambda x: 'color: #2ecc71' if isinstance(x, float) and x > 0 else 'color: #e74c3c', subset=['% Change']) \
+        .map(lambda x: 'color: #2ecc71' if isinstance(x, float) and x > 0 else 'color: #e74c3c', subset=['% Change']) \
         .set_properties(**{'background-color': '#1E1E1E', 'color': 'white'}) \
         .set_table_styles([{
             'selector': 'th',
@@ -250,7 +271,7 @@ def style_gainers(df):
 def style_losers(df):
     styled = df.style \
         .format({'% Change': '{:+.2f}%'}) \
-        .applymap(lambda x: 'color: #e74c3c' if isinstance(x, float) and x < 0 else 'color: #2ecc71', subset=['% Change']) \
+        .map(lambda x: 'color: #e74c3c' if isinstance(x, float) and x < 0 else 'color: #2ecc71', subset=['% Change']) \
         .set_properties(**{'background-color': '#1E1E1E', 'color': 'white'}) \
         .set_table_styles([{
             'selector': 'th',
@@ -275,11 +296,16 @@ with col1:
         st.session_state['last_gainer_url'] = url_gainer
     gainers_df = st.session_state['gainers_data']
     st.subheader("Top Gainers")
+    # if not gainers_df.empty:
+    #     # st.dataframe(style_gainers(gainers_df), use_container_width=True)
+    #     st.dataframe(style_gainers(gainers_df), width='stretch')
+    # else:
+    #     st.info("No data available for this index.")
     if not gainers_df.empty:
-        st.dataframe(style_gainers(gainers_df), use_container_width=True)
-        # st.dataframe(style_gainers(gainers_df), width='stretch')
+        st.dataframe(style_gainers(gainers_df), use_container_width=True)  # Keep using this for now
     else:
         st.info("No data available for this index.")
+
 
 with col2:
     url_loser = INDEX_URLS[index_display]["loser"]
@@ -290,9 +316,13 @@ with col2:
         st.session_state['last_loser_url'] = url_loser
     losers_df = st.session_state['losers_data']
     st.subheader("Top Losers")
+    # if not losers_df.empty:
+    #     # st.dataframe(style_losers(losers_df), use_container_width=True)
+    #     st.dataframe(style_losers(losers_df), width='stretch')
+    # else:
+    #     st.info("No data available for this index.")
     if not losers_df.empty:
-        st.dataframe(style_losers(losers_df), use_container_width=True)
-        # st.dataframe(style_losers(losers_df), width='stretch')
+        st.dataframe(style_losers(losers_df), use_container_width=True)  # Keep using this for now
     else:
         st.info("No data available for this index.")
 
@@ -308,5 +338,3 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-
-
