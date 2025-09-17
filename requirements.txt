@@ -7,3 +7,5 @@ streamlit-autorefresh
 matplotlib
 google-generativeai
 numpy
+lxml  
+html5lib 
