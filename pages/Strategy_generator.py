@@ -83,7 +83,8 @@ if not st.session_state["chatbot_enabled"]:
 
 # --- Main Application Interface ---
 genai.configure(api_key=st.session_state["GEMINI_API_KEY"])
-model = genai.GenerativeModel('gemini-1.5-flash')
+# model = genai.GenerativeModel('gemini-1.5-flash')
+model = genai.GenerativeModel('gemini-2.5-pro')
 
 def extract_code(response: str) -> str:
     """Improved code extraction with multiple patterns"""
@@ -197,3 +198,4 @@ if generate_clicked:
             - Ensure network connectivity
             - Try simpler strategy rules
             """)
+
